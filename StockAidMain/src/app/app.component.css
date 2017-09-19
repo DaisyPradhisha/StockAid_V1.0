@@ -23,12 +23,12 @@
 
 
   .mat-toolbar.mat-accent {
-    background:#800064;
-    color: #fff;
+    background:#0BA6EE;
+    color: #0F0606;
 }
 
 .mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
-    font-family:fantasy;
+    font-family:Tahoma;
     font-size: 14px;
     font-weight: 500;
 }

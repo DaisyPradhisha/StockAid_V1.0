@@ -13,7 +13,7 @@
 <!-- SideNav Design -->
 
 <md-sidenav-container class="example-container">
-    <md-sidenav #sidenav class="example-sidenav">
+    <md-sidenav mode="side" opened="true" #sidenav class="example-sidenav">
        <app-code></app-code>
      <div>  
     Let's get rolling
@@ -21,15 +21,17 @@
     </md-sidenav>
 
     <div class="example-sidenav-content">
-       
-      <button type="button" md-button (click)="sidenav.open()">
+      <div fxLayout="row" fxLayoutGap="20px">Hi</div>
+      <div fxLayout="row" fxLayoutGap="20px">Hi</div>
+      <div fxLayout="column" fxLayoutGap="20px">Hi</div>
+     <!-- <button type="button" md-button (click)="sidenav.open()">
       Welcome to StockAid . Click Here
-      </button>
+      </button>-->
     </div>
 </md-sidenav-container>
 
 <!-- Footer Design -->
 <md-toolbar color="accent" class="bottom">
     <i class="material-icons">copyright</i>
-  <span style="font-size: 10px" >copyrights</span>
+     <span style="font-size: 10px" >copyrights</span>
 </md-toolbar>

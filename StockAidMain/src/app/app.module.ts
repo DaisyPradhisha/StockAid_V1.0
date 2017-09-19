@@ -52,12 +52,14 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 //for primeng
 import { ChartModule } from 'primeng/primeng';
 import { AutocompleteSimpleExample } from './code/code.component';
+import { NewsComponent } from './news/news.component';
 
 
 @NgModule({
   exports: [
     ChartModule
   ],
+
   
 })
 export class PrimeModule { }
@@ -106,7 +108,8 @@ export class MaterialModule { }
 @NgModule({
   declarations: [
     AppComponent,
-    AutocompleteSimpleExample
+    AutocompleteSimpleExample,
+    NewsComponent
   
    
    
