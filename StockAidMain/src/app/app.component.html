@@ -14,10 +14,14 @@
 
 <md-sidenav-container class="example-container">
     <md-sidenav #sidenav class="example-sidenav">
+       <app-code></app-code>
+     <div>  
     Let's get rolling
+  </div>
     </md-sidenav>
 
     <div class="example-sidenav-content">
+       
       <button type="button" md-button (click)="sidenav.open()">
       Welcome to StockAid
       </button>
@@ -26,5 +30,6 @@
 
 <!-- Footer Design -->
 <md-toolbar color="accent" class="bottom">
+    <i class="material-icons">copyright</i>
   <span style="font-size: 10px" >copyrights</span>
 </md-toolbar>
