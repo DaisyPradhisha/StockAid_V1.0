@@ -20,3 +20,15 @@
   .example-sidenav {
     padding: 20px;
   }
+
+
+  .mat-toolbar.mat-accent {
+    background:#800064;
+    color: #fff;
+}
+
+.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
+    font-family:fantasy;
+    font-size: 14px;
+    font-weight: 500;
+}
