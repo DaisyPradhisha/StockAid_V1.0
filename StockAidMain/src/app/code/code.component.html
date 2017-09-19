@@ -1,19 +1,22 @@
 <form class="example-form">
     <md-form-field class="example-full-width">
-      <input type="text" placeholder="Go for your stock" aria-label="Number" mdInput [formControl]="myControl" [mdAutocomplete]="auto">
-      <md-autocomplete #auto="mdAutocomplete">
-        <md-option *ngFor="let option of options" [value]="option">
+      <input type="text" [(ngModel)]=symbol placeholder="Go for your stockcode" aria-label="Number" mdInput [formControl]="myControl" [mdAutocomplete]="auto">
+    
+      
+     <md-autocomplete #auto="mdAutocomplete">
+       <!-- <md-option *ngFor="let option of options" [value]="option">
           {{ option }}
-        </md-option>
+        </md-option>-->
       </md-autocomplete>
     </md-form-field>
   </form>
+  <div> <button md-fab color="primary"(click)=searchStock()>Go</button></div>
 
-<div>
-  <md-form-field>
-      <input mdInput [mdDatepicker]="picker" placeholder="Start date">
-      <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
-      <md-datepicker #picker></md-datepicker>
-    </md-form-field>
-</div>
+
+<h5>Company Name:{{companyName}}</h5>
+<h5>LatestPrice:{{latestPrice}}</h5>
+<h5>Sector:{{sector}}</h5>
+<h5>Primary Exchange:{{primaryExchange}}</h5>
+
+
 
