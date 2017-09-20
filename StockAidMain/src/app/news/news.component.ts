@@ -1,4 +1,4 @@
-import { Component,  } from '@angular/core';
+import { Component, Input,OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Http,Response} from '@angular/http';
 
@@ -8,18 +8,23 @@ import {Http,Response} from '@angular/http';
   templateUrl: './news.component.html',
   styleUrls: ['./news.component.css']
 })
-export class NewsComponent   {
+export class NewsComponent  implements OnInit {
+
+  @Input() symbol;
 
   constructor(private http:Http){}
-  symbol='';
+  
   datetime='';
   headline='';
   primaryExchange='';
   url='';
   source='';
 
-  searchStock(){
-    this.http.get('https://api.iextrading.com/1.0/stock/'+this.symbol+'/news')
+  ngOnInit()
+  {}
+
+  searchNews(){
+    this.http.get('https://api.iextrading.com/1.0/stock/'+this.symbol+'/news/last/1')
     .subscribe(
       (res:Response)=>{
         const s= res.json();

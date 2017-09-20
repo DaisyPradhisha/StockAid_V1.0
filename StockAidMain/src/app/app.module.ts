@@ -46,6 +46,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ObservableMedia } from '@angular/flex-layout';
+import { DataService } from './services/data.service'; 
 
 
 
@@ -127,6 +128,7 @@ export class MaterialModule { }
     
   ],
  
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [DataService]
 })
 export class AppModule { }
