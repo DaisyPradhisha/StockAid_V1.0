@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { AppComponent } from './app.component';
 
-
+import 'rxjs/Rx';
 //material
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -16,7 +16,6 @@ import {
   MdCardModule,
   MdCheckboxModule,
   MdChipsModule,
- 
   MdDatepickerModule,
   MdDialogModule,
   MdExpansionModule,
@@ -45,7 +44,8 @@ import {
 import { CdkTableModule } from '@angular/cdk/table';
 import { HttpModule } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
-import {FlexLayoutModule} from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { ObservableMedia } from '@angular/flex-layout';
 
 
 
@@ -123,7 +123,8 @@ export class MaterialModule { }
     MdNativeDateModule,
     ReactiveFormsModule,
     PrimeModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    
   ],
  
   bootstrap: [AppComponent]

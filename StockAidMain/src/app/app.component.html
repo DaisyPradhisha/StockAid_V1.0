@@ -15,19 +15,17 @@
 <md-sidenav-container class="example-container">
     <md-sidenav mode="side" opened="true" #sidenav class="example-sidenav">
        <app-code></app-code>
-     <div>  
-    Let's get rolling
-  </div>
     </md-sidenav>
 
-    <div class="example-sidenav-content">
-      <div fxLayout="row" fxLayoutGap="20px">Hi</div>
-      <div fxLayout="row" fxLayoutGap="20px">Hi</div>
-      <div fxLayout="column" fxLayoutGap="20px">Hi</div>
+    <div fxLayout="row" fxlayoutalign="stretch" fxLayoutWrap class="example-sidenav-content" >
      <!-- <button type="button" md-button (click)="sidenav.open()">
       Welcome to StockAid . Click Here
       </button>-->
-    </div>
+          <div fxFlex="50" fxFill="50" ngClass="SampleDiv1">Data Flex Layout</div>
+          <div fxFlex="50" fxFill="50" ngClass="SampleDiv2">Chart Flex Layout</div>
+          <div fxFlex="100">three</div>
+       </div>
+
 </md-sidenav-container>
 
 <!-- Footer Design -->

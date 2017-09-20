@@ -10,6 +10,8 @@ import {Http,Response} from '@angular/http';
 })
 export class AutocompleteSimpleExample {
   
+  sym:string;
+
   constructor(private http:Http){}
   symbol='';
   companyName='';
