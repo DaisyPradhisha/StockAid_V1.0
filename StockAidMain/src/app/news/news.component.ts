@@ -19,20 +19,19 @@ export class NewsComponent  implements OnInit {
   primaryExchange='';
   url='';
   source='';
+  filteredSymbol: any;
 
   ngOnInit()
   {}
 
   searchNews(){
-    this.http.get('https://api.iextrading.com/1.0/stock/'+this.symbol+'/news/last/1')
+    this.http.get('https://api.iextrading.com/1.0/stock/'+this.symbol+'/news/last/5')
     .subscribe(
       (res:Response)=>{
         const s= res.json();
+        
+        this .filteredSymbol=s
         console.log(s);
-        this.datetime=s.datetime;
-        this.headline=s.headline;
-        this.url=s.url;
-        this.source=s.source;
         
       }
     )
