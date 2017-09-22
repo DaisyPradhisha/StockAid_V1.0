@@ -8,7 +8,8 @@ export class DataService {
 
   constructor(private http: Http) { }
 
-  fetchData(){
+  fetchData()
+  {
     return this.http.get("assets/data/stockcodes.json")
       .map((res) => res.json())
    

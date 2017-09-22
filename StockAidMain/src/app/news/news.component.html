@@ -2,16 +2,14 @@
   news works! {{symbol}}
 </p>
 
+
 <div>
     <button md-fab color="accent"(click)=searchNews()>News
     </button>
 </div>
 
-<!--<h5>datetime:{{datetime}}</h5>
-<h5>headline:{{headline}}</h5>
-<h5>url:{{url}}</h5>
-<h5>source:{{source}}</h5>-->
-
 <ol class="newslist">
   <li *ngFor=" let i of  filteredSymbol">{{i.headline}} ~{{i.datetime}}</li>
 </ol>
+
+

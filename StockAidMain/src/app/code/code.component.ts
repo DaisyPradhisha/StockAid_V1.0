@@ -12,23 +12,27 @@ import { MdOptionSelectionChange ,MdSelect,MdAutocompleteSelectedEvent} from "@a
   templateUrl: './code.component.html',
   styleUrls: ['./code.component.css']
 })
+
 export class AutocompleteSimpleExample implements OnInit{
   
   stateCtrl: FormControl;
-  
   filteredSymbol: any;
-  
   allSymbols;
-
   symbol='';
+  companyName='';
+  latestPrice='';
+  primaryExchange='';
+  sector='';
 
   @Output() selectedStock = new EventEmitter<any>();
 
-  constructor(private dataService: DataService,private http:Http) {
+  constructor(private dataService: DataService,private http:Http)
+   {
     this.stateCtrl = new FormControl();
-  }
+   }
   
-  ngOnInit(){
+  ngOnInit()
+  {
     this.dataService.fetchData()
       .subscribe(
         (data) => {
@@ -41,75 +45,37 @@ export class AutocompleteSimpleExample implements OnInit{
     
   }
 
-  filter(Symbol) {
+  filter(Symbol)
+   {
    return this.allSymbols.filter(Symb => new RegExp(`^${Symbol}`, '').test(Symb.Symbol)); 
   }
   
-
-   displayFn(Symb) {
+  displayFn(Symb) 
+  {
       return Symb ? Symb.Symbol : Symb;
    }
 
-   selected(event: MdOptionSelectionChange, Symb: any) {
-    if (event.source.selected) {
+   selected(event: MdOptionSelectionChange, Symb: any) 
+    {
+    if (event.source.selected) 
+    {
       this.selectedStock.emit(Symb);
       this.symbol=Symb.Symbol;
     }
-  }
-
-
-  
-   companyName='';
-   latestPrice='';
-   primaryExchange='';
-   sector='';
-   searchStock(){
-    this.http.get('https://api.iextrading.com/1.0/stock/'+this.symbol+'/quote')
-    .subscribe(
-      (res:Response)=>{
-        const s= res.json();
-        console.log(s);
-        this.companyName=s.companyName;
-        this.latestPrice=s.latestPrice;
-        this.primaryExchange=s.primaryExchange;
-        this.sector=s.sector;
-      }
-    )
-  }
-
-  
-/*
-  constructor(private http:Http){}
-  symbol='';
-  companyName='';
-  latestPrice='';
-  primaryExchange='';
-  sector='';
-
-  searchStock(){
-    this.http.get('https://api.iextrading.com/1.0/stock/'+this.symbol+'/quote')
-    .subscribe(
-      (res:Response)=>{
-        const s= res.json();
-        console.log(s);
-        this.companyName=s.companyName;
-        this.latestPrice=s.latestPrice;
-        this.primaryExchange=s.primaryExchange;
-        this.sector=s.sector;
-      }
-    )
-
-  }
-    myControl: FormControl = new FormControl();
-
-
-
-  
-    options = [
-      'GE',
-      'Aapl',
-      'AA'
-     ];
-  */
-   
     }
+
+    searchStock()
+    {
+    this.http.get('https://api.iextrading.com/1.0/stock/'+this.symbol+'/quote')
+    .subscribe(
+      (res:Response)=>{
+        const s= res.json();
+        console.log(s);
+        this.companyName=s.companyName;
+        this.latestPrice=s.latestPrice;
+        this.primaryExchange=s.primaryExchange;
+        this.sector=s.sector;
+      }
+    )
+  }
+}

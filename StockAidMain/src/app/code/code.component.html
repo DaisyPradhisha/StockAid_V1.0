@@ -1,24 +1,21 @@
+<!-- Autocomplete -->
 <form class="example-form">
     <md-form-field class="example-full-width">
-      <!--  <p>Selected symbol code is {{SelStock?.Symbol}}</p>-->
+     
         
         <input mdInput [(ngModel)]="SelStock" placeholder="Go for your stock" [mdAutocomplete]="auto" [formControl]="stateCtrl">
-     <md-autocomplete  #auto="mdAutocomplete" [displayWith]="displayFn">
+          <md-autocomplete  #auto="mdAutocomplete" [displayWith]="displayFn">
           <md-option  (onSelectionChange)="selected($event, Symb)" *ngFor="let Symb of filteredSymbol | async" [value]="Symb">
             {{ Symb.Symbol }}
           </md-option>
         </md-autocomplete>
 
       
-     <!--  <md-autocomplete #auto="mdAutocomplete">
-       <input type="text" [(ngModel)]=symbol placeholder="Go for your stockcode" aria-label="Number" mdInput [formControl]="myControl" [mdAutocomplete]="auto">
-      <md-option *ngFor="let option of options" [value]="option">
-          {{ option }}
-        </md-option>
-      </md-autocomplete>-->
-      
+
     </md-form-field>
   </form>
+
+  <!-- Go Button -->
   <div> <button md-fab color="primary"(click)=searchStock()>Go</button></div>
 
 

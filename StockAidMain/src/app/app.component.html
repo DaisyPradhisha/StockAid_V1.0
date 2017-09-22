@@ -10,23 +10,29 @@
   <span class="example-fill-remaining-space"></span>
 </md-toolbar>
 
+<button type="button" md-button (click)="sidenav.open()">
+    Welcome to StockAid . Click Here
+    </button>
+
 <!-- SideNav Design -->
 
 <md-sidenav-container class="example-container">
-    <md-sidenav mode="side" opened="true" #sidenav class="example-sidenav">
+    <md-sidenav mode="over" opened="false" #sidenav class="example-sidenav">
        <app-code></app-code>
     </md-sidenav>
 
-    <div fxLayout="row" fxlayoutalign="stretch" fxLayoutWrap class="example-sidenav-content" >
-     <!-- <button type="button" md-button (click)="sidenav.open()">
-      Welcome to StockAid . Click Here
-      </button>-->
-          <div fxFlex="50" fxFill="50" ngClass="SampleDiv1">Data Flex Layout</div>
-          <div fxFlex="50" fxFill="50" ngClass="SampleDiv2">Chart Flex Layout</div>
-          <div fxFlex="100">three</div>
-       </div>
-
+    <div fxLayout="row wrap" fxlayoutalign="stretch" fxLayoutWrap class="example-sidenav-content">
+      
+        <div fxFlex="50" ngClass="SampleDiv1">Data Flex Layout
+            <app-data-table></app-data-table>
+        </div>
+        <div fxFlex="50" ngClass="SampleDiv2">Chart Flex Layout</div>
+        <div fxFlex="grow" ngClass="SampleDiv3">three</div>
+    </div>
 </md-sidenav-container>
+
+
+
 
 <!-- Footer Design -->
 <md-toolbar color="accent" class="bottom">

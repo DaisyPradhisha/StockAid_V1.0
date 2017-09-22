@@ -54,12 +54,14 @@ import { DataService } from './services/data.service';
 import { ChartModule } from 'primeng/primeng';
 import { AutocompleteSimpleExample } from './code/code.component';
 import { NewsComponent } from './news/news.component';
+import { DataTableComponent } from './data-table/data-table.component';
 
 
 @NgModule({
   exports: [
     ChartModule
   ],
+ 
 
   
 })
@@ -110,7 +112,8 @@ export class MaterialModule { }
   declarations: [
     AppComponent,
     AutocompleteSimpleExample,
-    NewsComponent
+    NewsComponent,
+    DataTableComponent
   
    
    
