@@ -1,4 +1,4 @@
-import { Component, OnInit,  Output, EventEmitter  } from '@angular/core';
+  import { Component, OnInit,  Output, EventEmitter  } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Http,Response} from '@angular/http';
 import { DataService } from '../services/data.service'; 
@@ -52,7 +52,7 @@ export class AutocompleteSimpleExample implements OnInit{
   
   displayFn(Symb) 
   {
-      return Symb ? Symb.Symbol : Symb;
+      return Symb ? Symb.Name : Symb;
    }
 
    selected(event: MdOptionSelectionChange, Symb: any) 
