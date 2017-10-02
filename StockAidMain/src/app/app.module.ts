@@ -47,7 +47,7 @@ import { HttpClient } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ObservableMedia } from '@angular/flex-layout';
 import { DataService } from './services/data.service'; 
-
+import { BchartService } from './services/bchart.service'; 
 
 
 //for primeng
@@ -55,12 +55,14 @@ import { ChartModule } from 'primeng/primeng';
 import { AutocompleteSimpleExample } from './code/code.component';
 import { NewsComponent } from './news/news.component';
 import { DataTableComponent } from './data-table/data-table.component';
+import { BarchartComponent } from './barchart/barchart.component';
 
 
 @NgModule({
   exports: [
     ChartModule
   ],
+
  
 
   
@@ -113,7 +115,8 @@ export class MaterialModule { }
     AppComponent,
     AutocompleteSimpleExample,
     NewsComponent,
-    DataTableComponent
+    DataTableComponent,
+    BarchartComponent
   
    
    
@@ -132,6 +135,6 @@ export class MaterialModule { }
   ],
  
   bootstrap: [AppComponent],
-  providers: [DataService]
+  providers: [DataService,BchartService]
 })
 export class AppModule { }
