@@ -41,8 +41,8 @@ export class DataTableComponent  implements OnInit {
     constructor(private bchartService:BchartService) {}
     
    /**Method that retrive data for the table through Service */
-    getDataFromService(symbol: string) {
-      this.bchartService.getchart(symbol).subscribe((p) => {
+    getDataFromService(symb: string) {
+      this.bchartService.getchart(symb).subscribe((p) => {
         this.data1 = p;
         this.data.length = 0;
   
