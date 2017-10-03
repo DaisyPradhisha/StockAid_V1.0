@@ -23,8 +23,8 @@
 
 
   .mat-toolbar.mat-accent {
-    background:rgba(255, 255, 0, 0.94);
-    color:purple;
+    background:black;
+    color:whitesmoke;
   }
 
 .mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
@@ -34,12 +34,14 @@
   }
 
 .SampleDiv1{ 
-  background-color:peachpuff; 
+  background-color:gainsboro; 
+  font-family:Comic Sans MS;
   height:50%;
   }
 
 .SampleDiv2{ 
-  background-color:#DDD7A0; 
+  background-color:grey; 
+  font-family:Comic Sans MS;
    height:50%;
   }
 
@@ -47,4 +49,6 @@
 .SampleDiv3{ 
 
    height:50%;
+   font-family:Comic Sans MS;
+   background-color:whitesmoke; 
   }
