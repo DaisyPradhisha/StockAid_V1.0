@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { AppComponent } from './app.component';
-
+import { RouterModule, Routes } from '@angular/router';
 import 'rxjs/Rx';
 //material
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -56,12 +56,22 @@ import { AutocompleteSimpleExample } from './code/code.component';
 import { NewsComponent } from './news/news.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { BarchartComponent } from './barchart/barchart.component';
+import { GlossaryComponent } from './glossary/glossary.component';
+
+
+//Routing
+
+const appRoutes: Routes = [
+  { path: 'glossary', component: GlossaryComponent },
+ 
+];
 
 
 @NgModule({
   exports: [
     ChartModule
   ],
+
 
  
 
@@ -116,7 +126,8 @@ export class MaterialModule { }
     AutocompleteSimpleExample,
     NewsComponent,
     DataTableComponent,
-    BarchartComponent
+    BarchartComponent,
+    GlossaryComponent
   
    
    
@@ -131,6 +142,11 @@ export class MaterialModule { }
     ReactiveFormsModule,
     PrimeModule,
     FlexLayoutModule,
+
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
     
   ],
  
