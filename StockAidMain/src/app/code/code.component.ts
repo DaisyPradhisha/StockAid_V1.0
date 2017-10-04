@@ -24,12 +24,14 @@ export class AutocompleteSimpleExample implements OnInit{
   primaryExchange='';
   sector='';
 
-  @Output() selectedStock = new EventEmitter<any>();
+
 
   constructor(private dataService: DataService,private http:Http)
    {
     this.stateCtrl = new FormControl();
    }
+
+   @Output() selectedStock = new EventEmitter<any>();
   
   ngOnInit()
   {

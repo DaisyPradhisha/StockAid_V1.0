@@ -63,6 +63,7 @@ import { GlossaryComponent } from './glossary/glossary.component';
 
 const appRoutes: Routes = [
   { path: 'glossary', component: GlossaryComponent },
+  { path: 'chart', component: BarchartComponent},
  
 ];
 
