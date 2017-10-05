@@ -57,14 +57,27 @@ import { NewsComponent } from './news/news.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { BarchartComponent } from './barchart/barchart.component';
 import { GlossaryComponent } from './glossary/glossary.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 //Routing
 
 const appRoutes: Routes = [
-  { path: 'glossary', component: GlossaryComponent },
-  { path: 'chart', component: BarchartComponent},
+  {
+  path: 'dashboard',
+  component: DashboardComponent,
  
+},
+{ path: '',
+  redirectTo: '/dashboard',
+  pathMatch: 'full'
+},
+{
+  path: 'glossary',
+  component: GlossaryComponent,
+ 
+},
+
 ];
 
 
@@ -72,6 +85,7 @@ const appRoutes: Routes = [
   exports: [
     ChartModule
   ],
+
 
 
  
@@ -128,7 +142,8 @@ export class MaterialModule { }
     NewsComponent,
     DataTableComponent,
     BarchartComponent,
-    GlossaryComponent
+    GlossaryComponent,
+    DashboardComponent
   
    
    

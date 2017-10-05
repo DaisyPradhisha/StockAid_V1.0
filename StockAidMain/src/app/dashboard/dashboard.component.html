@@ -1,0 +1,33 @@
+<button type="button" md-button (click)="sidenav.open()">
+  Welcome to StockAid . Click Here
+  </button>
+
+<!-- SideNav Design -->
+
+<md-sidenav-container class="example-container">
+  <md-sidenav mode="over" opened="false" #sidenav class="example-sidenav">
+          <app-code (selectedStock)="SelectedStockHandler($event)"></app-code>
+         <!-- <a routerLink="/chart" routerLinkActive="active"></a>-->
+
+          <h4>{{name}} <br>{{sector}} </h4>
+  </md-sidenav>
+
+  <div fxLayout="row wrap" fxlayoutalign="stretch" fxLayoutWrap class="example-sidenav-content">
+    
+      <div fxFlex="50" ngClass="SampleDiv1">
+             
+              <app-data-table [symbol]="value"></app-data-table>
+         
+      </div>
+      <div fxFlex="50" ngClass="SampleDiv2">
+              <app-news [symbol]="value"></app-news>
+         
+      </div>
+      <div fxFlex="grow" ngClass="SampleDiv3">
+              <app-barchart [symbol]="value"></app-barchart>
+             
+             
+          
+      </div>
+  </div>
+</md-sidenav-container>
