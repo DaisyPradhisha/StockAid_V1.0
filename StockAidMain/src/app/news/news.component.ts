@@ -1,4 +1,4 @@
-import { Component, Input,OnInit } from '@angular/core';
+import { Component, Input,OnInit ,SimpleChanges} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Http,Response} from '@angular/http';
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
@@ -15,10 +15,18 @@ export class NewsComponent  implements OnInit {
   constructor(private http:Http){}
   filteredSymbol: any;
 
+  ngOnChanges(changes: SimpleChanges)
+  
+  {
+
+  this.searchNews(this.symbol);
+  
+  }
+
   ngOnInit()
   {}
 
-  searchNews()
+  searchNews(symbol:string)
   {
     this.http.get('https://api.iextrading.com/1.0/stock/'+this.symbol+'/news/last/5')
     .subscribe(

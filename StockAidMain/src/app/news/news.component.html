@@ -1,10 +1,7 @@
 
 
 
-<div>
-    <button md-fab color="accent"(click)=searchNews()>News
-    </button>
-</div>
+
 
 <ol class="newslist">
   <li *ngFor=" let i of  filteredSymbol">{{i.headline}} ~{{i.datetime}}</li>
