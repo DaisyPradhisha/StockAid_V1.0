@@ -4,7 +4,13 @@
 
 
 <ol class="newslist">
-  <li *ngFor=" let i of  filteredSymbol">{{i.headline}} ~{{i.datetime}}</li>
+  <li *ngFor=" let i of  filteredSymbol">
+
+   Headline {{i.headline}}~~
+    
+   URL: {{i.url}}
+    
+  </li>
 </ol>
 
 

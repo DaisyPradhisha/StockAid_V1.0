@@ -28,7 +28,7 @@ change=new Array<any>();
         
      }
   hData = {
-    labels: ['January', 'February', 'March', 'April', 'May'],
+    labels: ['', '', '', '', ''],
     datasets: [
       {
       }
