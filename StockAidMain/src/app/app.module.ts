@@ -64,12 +64,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const appRoutes: Routes = [
   {
-  path: 'dashboard',
+  path: 'home',
   component: DashboardComponent,
  
 },
 { path: '',
-  redirectTo: '/dashboard',
+  redirectTo: '/home',
   pathMatch: 'full'
 },
 {
