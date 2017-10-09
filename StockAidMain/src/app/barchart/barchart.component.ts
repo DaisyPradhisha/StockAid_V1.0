@@ -16,7 +16,7 @@ export class BarchartComponent  {
 
   @ViewChild("Chart") Chart: UIChart;
   @Input() symbol;
-
+  @Input() chartInterval: string = '';
 data1=new Array<Chart>();
 label=new Array<any>();
 highh=new Array<any>();
@@ -24,7 +24,7 @@ loww=new Array<any>();
 change=new Array<any>();
   ngOnChanges(changes: SimpleChanges)
       {
-    this.getValueFromChart(this.symbol);
+    this.getValueFromChart(this.symbol,this.chartInterval);
         
      }
   hData = {
@@ -37,9 +37,9 @@ change=new Array<any>();
  constructor(private bchartService:BchartService) { }
 
 
-getValueFromChart(sym : string)
+getValueFromChart(sym : string, interval: string)
 {
-         this.bchartService.getchart(sym).subscribe((r)=>
+         this.bchartService.getchart(sym,interval).subscribe((r)=>
    {
     this.data1=r;
     Object.keys(this.data1).forEach(element => {

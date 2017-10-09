@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   value='';
   name='';
   sector='';
+  chartInterval = ['5y', '2y', '1y', 'ytd','6m','3m','1m'];
   SelectedStockHandler(symbol:any)
   {
  this.symbol1=symbol;
@@ -24,4 +25,5 @@ this.sector=symbol.Sector;
 console.log(this.symbol1);
 console.log(this.value);
 }
+displayChart: boolean = true;
 }

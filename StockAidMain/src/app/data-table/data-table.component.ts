@@ -16,8 +16,10 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 export class DataTableComponent  implements OnInit {
   @Input() symbol;
+  @Input() chartInterval: string = '';
+
   ngOnChanges(changes: SimpleChanges) {
-    if (changes.symbol.currentValue != null) this.exampleDatabase.getDataFromService(this.symbol);
+    if (changes.symbol.currentValue != null) this.exampleDatabase.getDataFromService(this.symbol,this.chartInterval);
     console.log(changes.symbol.currentValue);
   }
 
@@ -41,8 +43,8 @@ export class DataTableComponent  implements OnInit {
     constructor(private bchartService:BchartService) {}
     
    /**Method that retrive data for the table through Service */
-    getDataFromService(symb: string) {
-      this.bchartService.getchart(symb).subscribe((p) => {
+    getDataFromService(symb: string,inter:string) {
+      this.bchartService.getchart(symb,inter).subscribe((p) => {
         this.data1 = p;
         this.data.length = 0;
   
