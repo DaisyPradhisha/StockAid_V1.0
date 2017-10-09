@@ -27,9 +27,11 @@ a:active {
   <li *ngFor=" let i of  filteredSymbol">
    DateTime: {{i.datetime}}
    <br/>
-    Summary: {{i.summary}}
-    <br/>
+   
     <a target="_blank" href={{i.url}}> {{i.headline}}</a>
+    <br/>
+    Summary: {{i.summary}}
+    
   </li>
 </ul>
 
