@@ -4,7 +4,7 @@
 <style>
   /* unvisited link */
   a {
-      color:black;
+      color:rgb(67, 14, 212);
   }
 /* visited link */
   a:visited {
@@ -25,12 +25,12 @@ a:active {
 <ul class="newslist">
    
   <li *ngFor=" let i of  filteredSymbol">
-   DateTime: {{i.datetime}}
+   {{i.datetime|date:'longDate'}}
    <br/>
    
     <a target="_blank" href={{i.url}}> {{i.headline}}</a>
     <br/>
-    Summary: {{i.summary}}
+    {{i.summary}}
     
   </li>
 </ul>
