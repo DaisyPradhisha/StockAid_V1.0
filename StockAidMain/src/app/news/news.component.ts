@@ -28,7 +28,7 @@ export class NewsComponent  implements OnInit {
 
   searchNews(symbol:string)
   {
-    this.http.get('https://api.iextrading.com/1.0/stock/'+this.symbol+'/news/last/10')
+    this.http.get('https://api.iextrading.com/1.0/stock/'+this.symbol+'/news/last/5')
     .subscribe(
       (res:Response)=>{
         const s= res.json();
