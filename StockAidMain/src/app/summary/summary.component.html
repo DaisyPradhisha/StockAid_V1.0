@@ -1,7 +1,27 @@
-<p>
-  summary works!
-</p>
 
+<p>Summary</p>
+<md-grid-list cols="2" rowHeight="2:1">
+    <md-grid-tile>
 
-{{beta}}
+       Beta: {{beta}}
+       <br/>
+       marketcap: {{marketcap}}
+      </md-grid-tile>
+      
+      <md-grid-tile>
+          week52change:{{week52change}};<br/>
+          profitMargin:{{profitMargin}}
+       </md-grid-tile>
+
+       <md-grid-tile>
+          dividendYield:{{dividendYield}}<br/>
+          exDividendDate:{{exDividendDate}}
+       </md-grid-tile>
+
+       <md-grid-tile>
+          latestEPS: {{latestEPS}}<br/>
+       latestEPSDate: {{latestEPSDate}}</md-grid-tile>
+ 
+   
+  </md-grid-list>
    
