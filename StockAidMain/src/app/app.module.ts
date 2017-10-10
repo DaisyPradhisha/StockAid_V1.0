@@ -59,6 +59,8 @@ import { BarchartComponent } from './barchart/barchart.component';
 import { GlossaryComponent } from './glossary/glossary.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { SummaryComponent } from './summary/summary.component';
+
 
 //Routing
 
@@ -85,6 +87,7 @@ const appRoutes: Routes = [
   exports: [
     ChartModule
   ],
+ 
 
 
 
@@ -143,7 +146,8 @@ export class MaterialModule { }
     DataTableComponent,
     BarchartComponent,
     GlossaryComponent,
-    DashboardComponent
+    DashboardComponent,
+    SummaryComponent
   
    
    

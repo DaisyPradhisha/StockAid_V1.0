@@ -20,7 +20,7 @@ welcome
 <!-- SideNav Design -->
 
 <md-sidenav-container class="example-container">
-  <md-sidenav mode="over" opened="false" #sidenav class="example-sidenav" style="background:white">
+  <md-sidenav mode="over" opened="true" #sidenav class="example-sidenav" style="background:white">
           <app-code (selectedStock)="SelectedStockHandler($event)"></app-code>
                <h4>{{name}} <br>{{sector}} </h4>
   </md-sidenav>
@@ -46,8 +46,8 @@ welcome
               </md-tab>
               </md-tab-group>
       </div>
-      <div fxFlex="grow" ngClass="SampleDiv4">
-          
+      <div fxFlex="50" ngClass="SampleDiv4">
+          <app-summary></app-summary>
            
            
       
