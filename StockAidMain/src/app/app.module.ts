@@ -60,14 +60,19 @@ import { GlossaryComponent } from './glossary/glossary.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { SummaryComponent } from './summary/summary.component';
+import { HomeComponent } from './home/home.component';
 
 
 //Routing
 
 const appRoutes: Routes = [
   {
-  path: 'home',
+  path: 'stockanalysis',
   component: DashboardComponent,
+ 
+},{
+  path: 'home',
+  component: HomeComponent,
  
 },
 { path: '',
@@ -87,6 +92,7 @@ const appRoutes: Routes = [
   exports: [
     ChartModule
   ],
+ 
  
 
 
@@ -147,7 +153,8 @@ export class MaterialModule { }
     BarchartComponent,
     GlossaryComponent,
     DashboardComponent,
-    SummaryComponent
+    SummaryComponent,
+    HomeComponent
   
    
    
