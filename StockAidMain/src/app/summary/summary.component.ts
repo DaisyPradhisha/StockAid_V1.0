@@ -8,10 +8,24 @@ import {Http,Response} from '@angular/http';
   styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent implements OnInit {
+
+ 
+
+
   @Input() symbol;
   constructor(private http:Http){}
   filteredSymbol: any;
   beta='';
+  marketcap='';
+  latestEPS='';
+  latestEPSDate='';
+  dividendYield='';
+  exDividendDate='';
+  week52change='';
+  profitMargin='';
+
+
+
 
   ngOnChanges(changes: SimpleChanges)
   
@@ -31,10 +45,20 @@ export class SummaryComponent implements OnInit {
       (res:Response)=>{
         const s= res.json();
         console.log(s);
+        this.beta=s.beta;
+        this.marketcap=s.marketcap;
+        this.latestEPS=s.latestEPS;
+        this.latestEPSDate=s.latestEPSDate;
+        this.dividendYield=s.dividendYield;
+        this.exDividendDate=s.exDividendDate;
+        this.week52change=s.week52change;
+        this.profitMargin=s.profitMargin;
        
         
         
       }
+
+      
     )
   }
 }

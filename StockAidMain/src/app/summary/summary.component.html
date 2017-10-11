@@ -1,7 +1,109 @@
-<p>
-  summary works!
-</p>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<table>
+ 
+  <tr>
+    <td>Beta</td>
+    <td>{{beta}}</td>
+  </tr>
+  <tr>
+    <td>marketcap</td>
+    <td>{{marketcap}}</td>
+  </tr>
+  <tr>
+    <td>week52change</td>
+    <td>{{week52change}}</td>
+  </tr>
+  <tr>
+    <td>profitMargin</td>
+    <td>{{profitMargin}}</td>
+  </tr>
+  <tr>
+    <td>dividendYield</td>
+    <td>{{dividendYield}}</td>
+  </tr>
+  <tr>
+    <td>exDividendDate</td>
+    <td>{{exDividendDate}}</td>
+  </tr>
+  <tr>
+    <td>latestEPS</td>
+    <td>{{latestEPS}}</td>
+  </tr>
+  <tr>
+    <td>latestEPSDate</td>
+    <td>{{latestEPSDate}}</td>
+  </tr>
+</table>
+
+</body>
+</html>
 
 
-{{beta}}
+<!--
+
+
+<md-grid-list cols="2" rowHeight="2:1">
+    <md-grid-tile>
+
+       Beta: {{beta}}
+       <br/>
+       marketcap: {{marketcap}}
+      </md-grid-tile>
+      
+      <md-grid-tile>
+          week52change:{{week52change}};<br/>
+          profitMargin:{{profitMargin}}
+       </md-grid-tile>
+
+       <md-grid-tile>
+          dividendYield:{{dividendYield}}<br/>
+          exDividendDate:{{exDividendDate}}
+       </md-grid-tile>
+
+       <md-grid-tile>
+          latestEPS: {{latestEPS}}<br/>
+       latestEPSDate: {{latestEPSDate}}</md-grid-tile>
+ 
    
+  </md-grid-list>
+   
+-->
+
+<!--
+<marquee>exDividendDate:{{exDividendDate}}</marquee>
+<marquee>dividendYield:{{dividendYield}}</marquee>
+<marquee>latestEPS:{{latestEPS}}</marquee>
+<marquee>latestEPSDate:{{latestEPSDate}}</marquee>
+<marquee>week52change:{{week52change}}</marquee>
+<marquee>profitMargin:{{profitMargin}}</marquee>
+<marquee>Beta:{{beta}}</marquee>
+<marquee>marketcap:{{marketcap}}</marquee>-->
+
+<!-- HTML Codes by Quackit.com -->
+<style>
+    .html-marquee {
+      height:200px;
+      width:400px;
+      background-color:#303030;
+      font-family:Cursive;
+      font-size:20px;
+      color:white;
+      border-width:4;
+      border-style:dotted;
+      border-color:#ff0000;
+    }
+    </style>
+    <marquee class="html-marquee" direction="left" behavior="scroll" >
+    <p>Beta:{{beta}}</p>
+    </marquee>
