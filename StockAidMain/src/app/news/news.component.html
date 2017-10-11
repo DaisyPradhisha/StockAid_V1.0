@@ -25,20 +25,12 @@ a:active {
 <ul class="newslist">
 
   <li *ngFor=" let i of  filteredSymbol">
-<<<<<<< HEAD
    {{i.datetime|date:'longDate'}}
-=======
-   {{i.datetime|date:'medium'}}
->>>>>>> 3e6d735b9734136616e6efacd90294152971ff2c
    <br/>
    
     <a target="_blank" href={{i.url}}> {{i.headline}}</a>
     <br/>
-<<<<<<< HEAD
-    {{i.summary}}
-=======
      {{i.summary}}
->>>>>>> 3e6d735b9734136616e6efacd90294152971ff2c
     
   </li>
 </ul>
