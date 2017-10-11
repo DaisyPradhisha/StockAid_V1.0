@@ -21,7 +21,8 @@ data1=new Array<Chart>();
 label=new Array<any>();
 highh=new Array<any>();
 loww=new Array<any>();
-change=new Array<any>();
+close=new Array<any>();
+test="";
   ngOnChanges(changes: SimpleChanges)
       {
     this.getValueFromChart(this.symbol,this.chartInterval);
@@ -46,20 +47,20 @@ getValueFromChart(sym : string, interval: string)
    
    this.label.push(this.data1[element].date);
    this.highh.push(this.data1[element].high);
-   this.change.push(this.data1[element].change);
+   this.close.push(this.data1[element].close);
   // this.loww.push(this.data1[element].low);
   
-  });console.log(this.data1);console.log(this.label);console.log(this.change);
-  this.SetValuesAndUpdateChart(this.symbol, this.label, this.change);
+  });console.log(this.data1);console.log(this.label);console.log(this.close);
+  this.SetValuesAndUpdateChart(this.symbol, this.label, this.close);
 }
 )
  }
- SetValuesAndUpdateChart(symbol, label, change) {
+ SetValuesAndUpdateChart(symbol, label, close) {
   this.hData.labels = label;
   this.hData.datasets[0] = {
-    //label: symbol ? symbol : '',
-    label:'change',
-    data: change,
+   
+    label:'close',
+    data: close,
     fill: false,
     backgroundColor: 'purple',
     borderColor:'pink',
