@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SidenavService} from './services/sidenav.service';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,17 @@ export class AppComponent {
   value='';
   name='';
   sector='';
+  constructor(private sidenavService: SidenavService) {
+  }
+
+  ngOnInit(): void {
+    
+      }
+
+  public toggleSidenav() {
+    this.sidenavService
+      .openside();
+  } 
   SelectedStockHandler(symbol:any)
   {
  this.symbol1=symbol;

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild} from '@angular/core';
+import {SidenavService} from '../services/sidenav.service';
+import {MdSidenav} from "@angular/material";
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+  @ViewChild('sidenav') public sidenav: MdSidenav;
+  constructor(private sidenavService: SidenavService) { }
 
   ngOnInit() {
+    this.sidenavService
+    .setSidenav(this.sidenav);
   }
   symbol1="";
   value='';

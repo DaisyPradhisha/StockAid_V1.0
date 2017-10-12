@@ -48,7 +48,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ObservableMedia } from '@angular/flex-layout';
 import { DataService } from './services/data.service'; 
 import { BchartService } from './services/bchart.service'; 
-
+import {SidenavService} from './services/sidenav.service';
 
 //for primeng
 import { ChartModule } from 'primeng/primeng';
@@ -178,6 +178,6 @@ export class MaterialModule { }
   ],
  
   bootstrap: [AppComponent],
-  providers: [DataService,BchartService]
+  providers: [DataService,BchartService,SidenavService]
 })
 export class AppModule { }
