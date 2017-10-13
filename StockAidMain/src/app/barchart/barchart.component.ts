@@ -18,11 +18,6 @@ export class BarchartComponent  {
   @Input() symbol;
   @Input() chartInterval: string = '';
 data1=new Array<Chart>();
-label=new Array<any>();
-highh=new Array<any>();
-loww=new Array<any>();
-close=new Array<any>();
-test="";
   ngOnChanges(changes: SimpleChanges)
       {
     this.getValueFromChart(this.symbol,this.chartInterval);
@@ -40,18 +35,17 @@ test="";
 
 getValueFromChart(sym : string, interval: string)
 {
+  let label = new Array<any>();
+  let close = new Array<any>();
          this.bchartService.getchart(sym,interval).subscribe((r)=>
    {
     this.data1=r;
     Object.keys(this.data1).forEach(element => {
-   
-   this.label.push(this.data1[element].date);
-   this.highh.push(this.data1[element].high);
-   this.close.push(this.data1[element].close);
-  // this.loww.push(this.data1[element].low);
-  
-  });console.log(this.data1);console.log(this.label);console.log(this.close);
-  this.SetValuesAndUpdateChart(this.symbol, this.label, this.close);
+   label.push(this.data1[element].date);
+   close.push(this.data1[element].close);
+
+  });console.log(this.data1);console.log(label);console.log(close);
+  this.SetValuesAndUpdateChart(sym, label, close);
 }
 )
  }
@@ -64,7 +58,7 @@ getValueFromChart(sym : string, interval: string)
     fill: false,
     backgroundColor: 'purple',
     borderColor:'pink',
-      }, 
+      };this.Chart.refresh();
   /*this.hData.datasets[1] = {
     //label: symbol ? symbol : '',
     label:'low',
@@ -72,7 +66,7 @@ getValueFromChart(sym : string, interval: string)
     fill: false,
     backgroundColor: '#9CCC65',
     borderColor: '#673ab7',
-  };*/this.Chart.refresh();
+  };*/
  }
   
 
