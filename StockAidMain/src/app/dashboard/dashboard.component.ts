@@ -20,6 +20,8 @@ export class DashboardComponent implements OnInit {
   name='';
   sector='';
   chartInterval = ['5y', '2y', '1y', 'ytd','6m','3m','1m'];
+    isValid:boolean = true;
+  
   SelectedStockHandler(symbol:any)
   {
  this.symbol1=symbol;
@@ -28,6 +30,7 @@ this.name=symbol.Name;
 this.sector=symbol.Sector;
 console.log(this.symbol1);
 console.log(this.value);
+this.isValid=false;
 }
 displayChart: boolean = true;
 }

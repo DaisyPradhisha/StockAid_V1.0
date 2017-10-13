@@ -3,4 +3,11 @@
        height:50%;
        font-family:Comic Sans MS;
        background-color:#303030; 
-      }
+      } 
+      
+      md-spinner {
+            float:center; 
+            width:35%; 
+            height:0%; 
+            margin: 5px 10px 0px 0px;
+          }
