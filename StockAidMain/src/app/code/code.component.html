@@ -5,7 +5,8 @@
         
         <input mdInput [(ngModel)]="SelStock" placeholder="Go for your stock" [mdAutocomplete]="auto" [formControl]="stateCtrl">
       
-        <md-autocomplete  #auto="mdAutocomplete" [displayWith]="displayFn">
+        
+        <md-autocomplete  #auto="mdAutocomplete" [displayWith]="displayFn" mdTooltip="explore your stock">
           <md-option  (onSelectionChange)="selected($event, Symb)" *ngFor="let Symb of filteredSymbol | async" [value]="Symb">
            
             <span style="color:purple;font-weight:bold">{{ Symb.Symbol }}</span> 
